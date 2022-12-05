@@ -1,0 +1,28 @@
+<div class="conainer">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body bg-white p-4 text-black rounder-10">
+                <h1 class="text-black">Actualiza el Juego</h1>
+                <form action="/edit/{{task._id}}" method="post">
+                
+                    <input 
+                        type="text" 
+                        name="title" 
+                        placeholder="Title" 
+                        value="{{task.title}}" 
+                        class="form-control rounder-10 bg-purpleclear "
+                    ><br>
+
+                    <textarea 
+                        name = "description" 
+                        rows = "3" 
+                        placeholder = "Add a Description"
+                        class="form-control rounder-10 bg-purpleclear "
+                    >{{task.description}}</textarea><br>
+
+                    <button  class="btn btn-purpledark "> Actualizar </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

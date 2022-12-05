@@ -1,0 +1,29 @@
+<table class="table table-bordered table-hover table-black text-center text-black">
+    <thead>
+        <tr>
+            <th>N°</th>
+            <th>Titulo</th>
+            <th>Genero</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each tasks}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{title}}</td>
+            <td>{{description}}</td>
+            <td>
+                {{#if done}}
+                    <a href="/toggleDone/{{_id}}" class="btn">No disponible</a>
+                {{else}}
+                    <a href="/toggleDone/{{_id}}" class="btn">Disponible</a>
+                {{/if}}
+                <a href="/edit/{{_id}}" class="btn">Actualizar</a>
+                <a href="/delete/{{_id}}" class="btn">Eliminar</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
